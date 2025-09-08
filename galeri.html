@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Galeri siswa</title>
+  </head>
+    <body style="background-image: url(background.jpg);">
+
+    <header>
+      <a href="#" class="logo">Nizar</a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="skill.html">Skills</a>
+        <a href="contact.html">Contact</a>
+        <a href="galeri.html">Galeri</a>
+      </nav>
+    </header>
+
+    <section class="galeri">
+      <h1>Galeri siswa</h1>
+      <div class="service-item">
+        <i class="fa-solid fa-code service-icon"></i>
+        <h2>photos estetic</h2>
+        <img src="1000017260.jpg" style="width: 400px;border: 2px solid red;">
+      </div>
+      <div class="galeri-item">
+        <i class="fa-solid fa-paint-brush service-icon"></i>
+        <h2>Web Design</h2>
+         <img src="ss1.png" style="width: 500px;border: 2px solid red;">
+      </div>
+      <div class="service-item">
+        <i class="fa-solid fa-edit service-icon"></i>
+        <h2>Content Creation</h2>
+         <img src="screensut.png"  style="width: 500px;border: 3px solid red;">
+      </div>
+    </section>
+
+    <style>
+      body {
+        background-color: #191919;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        padding: 1rem 9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      nav {
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        margin-left: 4rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s ease;
+      }
+
+      nav a.active {
+        color: #e3651d;
+        border-bottom: 3px solid #e3651d;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #333;
+          padding: 1rem 0;
+          z-index: 1000;
+        }
+
+        nav.active {
+          display: flex;
+        }
+
+        nav a {
+          margin: 1rem 0;
+          font-size: 1.6rem;
+          text-align: center;
+        }
+      }
+
+      .services {
+        padding: 10rem 9% 5rem;
+        text-align: center;
+      }
+
+      .services h1 {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      .service-item {
+        margin-bottom: 3rem;
+      }
+
+      .service-icon {
+        font-size: 4rem;
+        color: #e3651d;
+        margin-bottom: 1.5rem;
+      }
+
+      .service-item h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .service-item p {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        color: #bbb;
+      }
+
+      @media (max-width: 600px) {
+        nav a {
+          margin-left: 2rem;
+          font-size: 1.5rem;
+        }
+
+        .services h1 {
+          font-size: 3rem;
+        }
+
+        .service-icon {
+          font-size: 3rem;
+        }
+
+        .service-item h2 {
+          font-size: 2rem;
+        }
+
+        .service-item p {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const nav = document.querySelector("nav");
+
+      mobileMenu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
